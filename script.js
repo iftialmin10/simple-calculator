@@ -4,20 +4,109 @@
 const grid = document.querySelector(".calculator-grid");
 
 const output = document.querySelector(".output");
-console.log(output);
 
 const preValue = document.querySelector(".previous-operand");
-console.log(preValue);
 const currentValue = document.querySelector(".current-operand");
-console.log(currentValue);
 
-const clear_equal = document.querySelectorAll(".span-two");
-console.log(clear_equal);
+const ac = document.querySelector(".span-AC");
+const del = document.querySelector(".span-Del");
+
+const num0 = document.querySelector(".span-0");
+const num1 = document.querySelector(".span-1");
+const num2 = document.querySelector(".span-2");
+const num3 = document.querySelector(".span-3");
+const num4 = document.querySelector(".span-4");
+const num5 = document.querySelector(".span-5");
+const num6 = document.querySelector(".span-6");
+const num7 = document.querySelector(".span-7");
+const num8 = document.querySelector(".span-8");
+const num9 = document.querySelector(".span-9");
+
+const div = document.querySelector(".span-divide");
+const multi = document.querySelector(".span-multi");
+const add = document.querySelector(".span-add");
+const sub = document.querySelector(".span-sub");
+
+const dec = document.querySelector(".span-deci");
+
+const eql = document.querySelector(".span-eq");
 
 //Screen
 
 // same class name
-for (let i = 0; i < clear_equal.length; i++)
-  clear_equal[i].addEventListener("click", function () {
-    console.log("Clicked");
-  });
+// for (let i = 0; i < clear_equal.length; i++)
+//   clear_equal[i].addEventListener("click", function () {
+//     console.log("Clicked");
+//   });
+
+ac.addEventListener("click", function () {
+  console.log("ac");
+});
+
+del.addEventListener("click", function () {
+  console.log("del");
+});
+
+num0.addEventListener("click", function () {
+  console.log("num0");
+});
+
+num1.addEventListener("click", function () {
+  console.log("num1");
+});
+
+num2.addEventListener("click", function () {
+  console.log("num2");
+});
+
+num3.addEventListener("click", function () {
+  console.log("num3");
+});
+
+num4.addEventListener("click", function () {
+  console.log("num4");
+});
+
+num5.addEventListener("click", function () {
+  console.log("num5");
+});
+
+num6.addEventListener("click", function () {
+  console.log("num6");
+});
+
+num7.addEventListener("click", function () {
+  console.log("num7");
+});
+
+num8.addEventListener("click", function () {
+  console.log("num8");
+});
+
+num9.addEventListener("click", function () {
+  console.log("num9");
+});
+
+div.addEventListener("click", function () {
+  console.log("div");
+});
+
+multi.addEventListener("click", function () {
+  console.log("multi");
+});
+
+add.addEventListener("click", function () {
+  console.log("add");
+});
+
+sub.addEventListener("click", function () {
+  console.log("sub");
+});
+
+dec.addEventListener("click", function () {
+  console.log("dec");
+});
+
+eql.addEventListener("click", function () {
+  console.log("eql");
+});
