@@ -113,7 +113,3 @@ eql.addEventListener('click', function () {
 
 // hard coded something in screen
 output.textContent = '123.456';
-
-preValue.textContent = 'Previous value';
-currentValue.textContent = 'Current value';
-document.querySelector('.output').style.color = 'rgba(255, 255, 255, 0.75)';
