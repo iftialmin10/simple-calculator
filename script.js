@@ -1,35 +1,35 @@
-"use strict";
+'use strict';
 
 // Label
-const grid = document.querySelector(".calculator-grid");
+const grid = document.querySelector('.calculator-grid');
 
-const output = document.querySelector(".output");
+const output = document.querySelector('.output');
 
-const preValue = document.querySelector(".previous-operand");
-const currentValue = document.querySelector(".current-operand");
+const preValue = document.querySelector('.previous-operand');
+const currentValue = document.querySelector('.current-operand');
 
-const ac = document.querySelector(".span-AC");
-const del = document.querySelector(".span-Del");
+const ac = document.querySelector('.span-AC');
+const del = document.querySelector('.span-Del');
 
-const num0 = document.querySelector(".span-0");
-const num1 = document.querySelector(".span-1");
-const num2 = document.querySelector(".span-2");
-const num3 = document.querySelector(".span-3");
-const num4 = document.querySelector(".span-4");
-const num5 = document.querySelector(".span-5");
-const num6 = document.querySelector(".span-6");
-const num7 = document.querySelector(".span-7");
-const num8 = document.querySelector(".span-8");
-const num9 = document.querySelector(".span-9");
+const num0 = document.querySelector('.span-0');
+const num1 = document.querySelector('.span-1');
+const num2 = document.querySelector('.span-2');
+const num3 = document.querySelector('.span-3');
+const num4 = document.querySelector('.span-4');
+const num5 = document.querySelector('.span-5');
+const num6 = document.querySelector('.span-6');
+const num7 = document.querySelector('.span-7');
+const num8 = document.querySelector('.span-8');
+const num9 = document.querySelector('.span-9');
 
-const div = document.querySelector(".span-divide");
-const multi = document.querySelector(".span-multi");
-const add = document.querySelector(".span-add");
-const sub = document.querySelector(".span-sub");
+const div = document.querySelector('.span-divide');
+const multi = document.querySelector('.span-multi');
+const add = document.querySelector('.span-add');
+const sub = document.querySelector('.span-sub');
 
-const dec = document.querySelector(".span-deci");
+const dec = document.querySelector('.span-deci');
 
-const eql = document.querySelector(".span-eq");
+const eql = document.querySelector('.span-eq');
 
 //Screen
 
@@ -39,74 +39,81 @@ const eql = document.querySelector(".span-eq");
 //     console.log("Clicked");
 //   });
 
-ac.addEventListener("click", function () {
-  console.log("ac");
+ac.addEventListener('click', function () {
+  console.log('ac');
 });
 
-del.addEventListener("click", function () {
-  console.log("del");
+del.addEventListener('click', function () {
+  console.log('del');
 });
 
-num0.addEventListener("click", function () {
-  console.log("num0");
+num0.addEventListener('click', function () {
+  console.log('num0');
 });
 
-num1.addEventListener("click", function () {
-  console.log("num1");
+num1.addEventListener('click', function () {
+  console.log('num1');
 });
 
-num2.addEventListener("click", function () {
-  console.log("num2");
+num2.addEventListener('click', function () {
+  console.log('num2');
 });
 
-num3.addEventListener("click", function () {
-  console.log("num3");
+num3.addEventListener('click', function () {
+  console.log('num3');
 });
 
-num4.addEventListener("click", function () {
-  console.log("num4");
+num4.addEventListener('click', function () {
+  console.log('num4');
 });
 
-num5.addEventListener("click", function () {
-  console.log("num5");
+num5.addEventListener('click', function () {
+  console.log('num5');
 });
 
-num6.addEventListener("click", function () {
-  console.log("num6");
+num6.addEventListener('click', function () {
+  console.log('num6');
 });
 
-num7.addEventListener("click", function () {
-  console.log("num7");
+num7.addEventListener('click', function () {
+  console.log('num7');
 });
 
-num8.addEventListener("click", function () {
-  console.log("num8");
+num8.addEventListener('click', function () {
+  console.log('num8');
 });
 
-num9.addEventListener("click", function () {
-  console.log("num9");
+num9.addEventListener('click', function () {
+  console.log('num9');
 });
 
-div.addEventListener("click", function () {
-  console.log("div");
+div.addEventListener('click', function () {
+  console.log('div');
 });
 
-multi.addEventListener("click", function () {
-  console.log("multi");
+multi.addEventListener('click', function () {
+  console.log('multi');
 });
 
-add.addEventListener("click", function () {
-  console.log("add");
+add.addEventListener('click', function () {
+  console.log('add');
 });
 
-sub.addEventListener("click", function () {
-  console.log("sub");
+sub.addEventListener('click', function () {
+  console.log('sub');
 });
 
-dec.addEventListener("click", function () {
-  console.log("dec");
+dec.addEventListener('click', function () {
+  console.log('dec');
 });
 
-eql.addEventListener("click", function () {
-  console.log("eql");
+eql.addEventListener('click', function () {
+  console.log('eql');
 });
+
+// hard coded something in screen
+output.textContent = '123.456';
+
+preValue.textContent = 'Previous value';
+currentValue.textContent = 'Current value';
+document.querySelector('.output').style.color = 'rgba(255, 255, 255, 0.75)';
