@@ -113,3 +113,8 @@ eql.addEventListener('click', function () {
 
 // hard coded something in screen
 output.textContent = '123.456';
+
+// AC button
+ac.addEventListener('click', function () {
+  output.textContent = '0';
+});
