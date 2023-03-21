@@ -41,6 +41,7 @@ const eql = document.querySelector('.span-eq');
 
 ac.addEventListener('click', function () {
   console.log('ac');
+  output.textContent = '0';
 });
 
 del.addEventListener('click', function () {
@@ -113,8 +114,3 @@ eql.addEventListener('click', function () {
 
 // hard coded something in screen
 output.textContent = '123.456';
-
-// AC button
-ac.addEventListener('click', function () {
-  output.textContent = '0';
-});
