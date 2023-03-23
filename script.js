@@ -49,42 +49,52 @@ del.addEventListener('click', function () {
 });
 
 num0.addEventListener('click', function () {
+  output.textContent = '0';
   console.log('num0');
 });
 
 num1.addEventListener('click', function () {
+  output.textContent = '1';
   console.log('num1');
 });
 
 num2.addEventListener('click', function () {
+  output.textContent = '2';
   console.log('num2');
 });
 
 num3.addEventListener('click', function () {
+  output.textContent = '3';
   console.log('num3');
 });
 
 num4.addEventListener('click', function () {
+  output.textContent = '4';
   console.log('num4');
 });
 
 num5.addEventListener('click', function () {
+  output.textContent = '5';
   console.log('num5');
 });
 
 num6.addEventListener('click', function () {
+  output.textContent = '6';
   console.log('num6');
 });
 
 num7.addEventListener('click', function () {
+  output.textContent = '7';
   console.log('num7');
 });
 
 num8.addEventListener('click', function () {
+  output.textContent = '8';
   console.log('num8');
 });
 
 num9.addEventListener('click', function () {
+  output.textContent = '9';
   console.log('num9');
 });
 
