@@ -39,6 +39,8 @@ const eql = document.querySelector('.span-eq');
 //     console.log("Clicked");
 //   });
 
+let a = ''; // for number input
+
 ac.addEventListener('click', function () {
   console.log('ac');
   output.textContent = '0';
@@ -50,51 +52,91 @@ del.addEventListener('click', function () {
 
 num0.addEventListener('click', function () {
   output.textContent = '0';
+
+  //
+  const val = 0;
+  a = output.textContent = a.concat(val);
   console.log('num0');
 });
 
 num1.addEventListener('click', function () {
   output.textContent = '1';
+
+  //
+  const val = 1;
+  a = output.textContent = a.concat(val);
   console.log('num1');
 });
 
 num2.addEventListener('click', function () {
   output.textContent = '2';
+
+  //
+  const val = 2;
+  a = output.textContent = a.concat(val);
   console.log('num2');
 });
 
 num3.addEventListener('click', function () {
   output.textContent = '3';
+
+  //
+  const val = 3;
+  a = output.textContent = a.concat(val);
   console.log('num3');
 });
 
 num4.addEventListener('click', function () {
   output.textContent = '4';
+
+  //
+  const val = 4;
+  a = output.textContent = a.concat(val);
   console.log('num4');
 });
 
 num5.addEventListener('click', function () {
   output.textContent = '5';
+
+  //
+  const val = 5;
+  a = output.textContent = a.concat(val);
   console.log('num5');
 });
 
 num6.addEventListener('click', function () {
   output.textContent = '6';
+
+  //
+  const val = 6;
+  a = output.textContent = a.concat(val);
   console.log('num6');
 });
 
 num7.addEventListener('click', function () {
   output.textContent = '7';
+
+  //
+  const val = 7;
+  a = output.textContent = a.concat(val);
   console.log('num7');
 });
 
 num8.addEventListener('click', function () {
   output.textContent = '8';
+
+  //
+  const val = 8;
+  a = output.textContent = a.concat(val);
   console.log('num8');
 });
 
 num9.addEventListener('click', function () {
   output.textContent = '9';
+
+  //
+  const val = 9;
+  a = output.textContent = a.concat(val);
   console.log('num9');
 });
 
@@ -115,6 +157,11 @@ sub.addEventListener('click', function () {
 });
 
 dec.addEventListener('click', function () {
+  output.textContent = '.';
+
+  //
+  const val = '.';
+  a = output.textContent = a.concat(val);
   console.log('dec');
 });
 
