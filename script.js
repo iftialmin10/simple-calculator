@@ -121,4 +121,4 @@ eql.addEventListener('click', function () {
 });
 
 // hard coded something in screen
-//output.textContent = '123.456';
+output.textContent = '123.456';
