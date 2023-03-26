@@ -29,6 +29,9 @@ const dec = document.querySelector('.span-deci');
 
 const eql = document.querySelector('.span-eq');
 
+// color chnage
+output.style.color = 'rgba(255, 255, 255, 0.75)';
+
 ac.addEventListener('click', function () {
   console.log('ac');
   output.textContent = '0';
@@ -89,18 +92,22 @@ num9.addEventListener('click', function () {
 });
 
 div.addEventListener('click', function () {
+  output.textContent = output.textContent + '÷';
   console.log('div');
 });
 
 multi.addEventListener('click', function () {
+  output.textContent = output.textContent + '*';
   console.log('multi');
 });
 
 add.addEventListener('click', function () {
+  output.textContent = output.textContent + '+';
   console.log('add');
 });
 
 sub.addEventListener('click', function () {
+  output.textContent = output.textContent + '-';
   console.log('sub');
 });
 
@@ -114,4 +121,4 @@ eql.addEventListener('click', function () {
 });
 
 // hard coded something in screen
-output.textContent = '123.456';
+//output.textContent = '123.456';
