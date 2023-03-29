@@ -1,8 +1,4 @@
 // Label
-const grid = document.querySelector('.calculator-grid');
-
-const output = document.querySelector('.output');
-
 const preValue = document.querySelector('.previous-operand');
 const currentValue = document.querySelector('.current-operand');
 
@@ -29,12 +25,11 @@ const dec = document.querySelector('.span-deci');
 
 const eql = document.querySelector('.span-eq');
 
-// color chnage
-output.style.color = 'rgba(255, 255, 255, 0.75)';
+let activeOperator = '';
 
 ac.addEventListener('click', function () {
   console.log('ac');
-  output.textContent = '0';
+  currentValue.textContent = '0';
 });
 
 del.addEventListener('click', function () {
@@ -42,77 +37,82 @@ del.addEventListener('click', function () {
 });
 
 num0.addEventListener('click', function () {
-  output.textContent = output.textContent + '0';
+  currentValue.textContent = currentValue.textContent + '0';
   console.log('num0');
 });
 
 num1.addEventListener('click', function () {
-  output.textContent = output.textContent + '1';
+  currentValue.textContent = currentValue.textContent + '1';
   console.log('num1');
 });
 
 num2.addEventListener('click', function () {
-  output.textContent = output.textContent + '2';
+  currentValue.textContent = currentValue.textContent + '2';
   console.log('num2');
 });
 
 num3.addEventListener('click', function () {
-  output.textContent = output.textContent + '3';
+  currentValue.textContent = currentValue.textContent + '3';
   console.log('num3');
 });
 
 num4.addEventListener('click', function () {
-  output.textContent = output.textContent + '4';
+  currentValue.textContent = currentValue.textContent + '4';
   console.log('num4');
 });
 
 num5.addEventListener('click', function () {
-  output.textContent = output.textContent + '5';
+  currentValue.textContent = currentValue.textContent + '5';
   console.log('num5');
 });
 
 num6.addEventListener('click', function () {
-  output.textContent = output.textContent + '6';
+  currentValue.textContent = currentValue.textContent + '6';
   console.log('num6');
 });
 
 num7.addEventListener('click', function () {
-  output.textContent = output.textContent + '7';
+  currentValue.textContent = currentValue.textContent + '7';
   console.log('num7');
 });
 
 num8.addEventListener('click', function () {
-  output.textContent = output.textContent + '8';
+  currentValue.textContent = currentValue.textContent + '8';
   console.log('num8');
 });
 
 num9.addEventListener('click', function () {
-  output.textContent = output.textContent + '9';
+  currentValue.textContent = currentValue.textContent + '9';
   console.log('num9');
 });
 
 div.addEventListener('click', function () {
-  output.textContent = output.textContent + '÷';
+  preValue.textContent = currentValue.textContent + '÷';
+  currentValue.textContent = '0';
   console.log('div');
 });
 
 multi.addEventListener('click', function () {
-  output.textContent = output.textContent + '*';
+  preValue.textContent = currentValue.textContent + '*';
+  currentValue.textContent = '0';
   console.log('multi');
 });
 
 add.addEventListener('click', function () {
-  output.textContent = output.textContent + '+';
+  preValue.textContent = currentValue.textContent + '+';
+  currentValue.textContent = '0';
   console.log('add');
 });
 
 sub.addEventListener('click', function () {
-  output.textContent = output.textContent + '-';
+  preValue.textContent = currentValue.textContent + '-';
+  currentValue.textContent = '0';
+  activeOperator = '-';
   console.log('sub');
 });
 
 dec.addEventListener('click', function () {
-  output.textContent = output.textContent + '.';
+  currentValue.textContent = currentValue.textContent + '.';
   console.log('dec');
 });
 
@@ -121,4 +121,5 @@ eql.addEventListener('click', function () {
 });
 
 // hard coded something in screen
-output.textContent = '123.456';
+currentValue.textContent = '0';
+preValue.textContent = '';
