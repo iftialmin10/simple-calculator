@@ -30,7 +30,7 @@ let activeOperator = '';
 ac.addEventListener('click', function () {
   console.log('ac');
   preValue.textContent = '';
-  currentValue.textContent = '';
+  currentValue.textContent = '0';
 });
 
 del.addEventListener('click', function () {
