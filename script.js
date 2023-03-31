@@ -29,7 +29,8 @@ let activeOperator = '';
 
 ac.addEventListener('click', function () {
   console.log('ac');
-  currentValue.textContent = '0';
+  preValue.textContent = '';
+  currentValue.textContent = '';
 });
 
 del.addEventListener('click', function () {
@@ -124,3 +125,12 @@ eql.addEventListener('click', function () {
 // hard coded something in screen
 currentValue.textContent = '0';
 preValue.textContent = '';
+
+// issue 5 logic = There should be no leading 0s
+const val = '04566';
+console.log(val);
+const nVal = val.charAt(0);
+console.log(nVal);
+if (nVal === '0') {
+  console.log(val.slice(1));
+}
