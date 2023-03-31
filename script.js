@@ -27,6 +27,14 @@ const eql = document.querySelector('.span-eq');
 
 let activeOperator = '';
 
+// Function
+const checkLeadingPosition = val => {
+  val.charAt(0) === '0'
+    ? (currentValue.textContent = val.slice(1))
+    : (currentValue.textContent = val);
+};
+
+// Event handler
 ac.addEventListener('click', function () {
   console.log('ac');
   preValue.textContent = '';
@@ -40,51 +48,61 @@ del.addEventListener('click', function () {
 
 num0.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '0';
+  checkLeadingPosition(currentValue.textContent);
   console.log('num0');
 });
 
 num1.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '1';
+  checkLeadingPosition(currentValue.textContent);
   console.log('num1');
 });
 
 num2.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '2';
+  checkLeadingPosition(currentValue.textContent);
   console.log('num2');
 });
 
 num3.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '3';
+  checkLeadingPosition(currentValue.textContent);
   console.log('num3');
 });
 
 num4.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '4';
+  checkLeadingPosition(currentValue.textContent);
   console.log('num4');
 });
 
 num5.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '5';
+  checkLeadingPosition(currentValue.textContent);
   console.log('num5');
 });
 
 num6.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '6';
+  checkLeadingPosition(currentValue.textContent);
   console.log('num6');
 });
 
 num7.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '7';
+  checkLeadingPosition(currentValue.textContent);
   console.log('num7');
 });
 
 num8.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '8';
+  checkLeadingPosition(currentValue.textContent);
   console.log('num8');
 });
 
 num9.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '9';
+  checkLeadingPosition(currentValue.textContent);
   console.log('num9');
 });
 
@@ -125,12 +143,3 @@ eql.addEventListener('click', function () {
 // hard coded something in screen
 currentValue.textContent = '0';
 preValue.textContent = '';
-
-// issue 5 logic = There should be no leading 0s
-const val = '04566';
-console.log(val);
-const nVal = val.charAt(0);
-console.log(nVal);
-if (nVal === '0') {
-  console.log(val.slice(1));
-}
