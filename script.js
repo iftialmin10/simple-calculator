@@ -34,6 +34,16 @@ const checkLeadingPosition = val => {
     : (currentValue.textContent = val);
 };
 
+let haveDot = false;
+const checkDecimalPoint = val => {
+  if (val.indexOf('.') && !haveDot) {
+    currentValue.textContent = currentValue.textContent + '.';
+    haveDot = true;
+  } else if (val.indexOf('.') && haveDot) {
+    currentValue.textContent;
+  }
+};
+
 // Event handler
 ac.addEventListener('click', function () {
   console.log('ac');
@@ -49,6 +59,7 @@ del.addEventListener('click', function () {
 num0.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '0';
   checkLeadingPosition(currentValue.textContent);
+
   console.log('num0');
 });
 
@@ -132,7 +143,8 @@ sub.addEventListener('click', function () {
 });
 
 dec.addEventListener('click', function () {
-  currentValue.textContent = currentValue.textContent + '.';
+  checkDecimalPoint(currentValue.textContent);
+
   console.log('dec');
 });
 
