@@ -25,16 +25,10 @@ const dec = document.querySelector('.span-deci');
 
 const eql = document.querySelector('.span-eq');
 
-let activeOperator = '';
-
 // Function
-const checkLeadingPosition = val => {
-  val.charAt(0) === '0'
-    ? (currentValue.textContent = val.slice(1))
-    : (currentValue.textContent = val);
-};
-
+let activeOperator = '';
 let haveDot = false;
+
 const checkDecimalPoint = val => {
   if (val.indexOf('.') && !haveDot) {
     currentValue.textContent = currentValue.textContent + '.';
@@ -42,6 +36,12 @@ const checkDecimalPoint = val => {
   } else if (val.indexOf('.') && haveDot) {
     currentValue.textContent;
   }
+};
+
+const checkLeadingPosition = val => {
+  val.charAt(0) === '0' && !haveDot //val.charAt(1) != '.'
+    ? (currentValue.textContent = val.slice(1))
+    : (currentValue.textContent = val);
 };
 
 // Event handler
