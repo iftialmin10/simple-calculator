@@ -39,16 +39,17 @@ const checkDecimalPoint = val => {
 };
 
 const checkLeadingPosition = val => {
-  val.charAt(0) === '0' && !haveDot //val.charAt(1) != '.'
+  val.charAt(0) === '0' && val.charAt(1) != '.'
     ? (currentValue.textContent = val.slice(1))
     : (currentValue.textContent = val);
 };
 
 // Event handler
 ac.addEventListener('click', function () {
-  console.log('ac');
-  preValue.textContent = '';
   currentValue.textContent = '0';
+  preValue.textContent = '';
+  haveDot = false;
+  console.log('ac');
 });
 
 del.addEventListener('click', function () {
@@ -59,7 +60,6 @@ del.addEventListener('click', function () {
 num0.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent + '0';
   checkLeadingPosition(currentValue.textContent);
-
   console.log('num0');
 });
 
