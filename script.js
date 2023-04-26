@@ -44,6 +44,12 @@ const checkLeadingPosition = val => {
     : (currentValue.textContent = val);
 };
 
+const checkLastDigit = val => {
+  if (val === '') {
+    currentValue.textContent = '0';
+  }
+};
+
 // Event handler
 ac.addEventListener('click', function () {
   currentValue.textContent = '0';
@@ -54,6 +60,7 @@ ac.addEventListener('click', function () {
 
 del.addEventListener('click', function () {
   currentValue.textContent = currentValue.textContent.toString().slice(0, -1);
+  checkLastDigit(currentValue.textContent);
   console.log('del');
 });
 
