@@ -52,22 +52,24 @@ const checkLastDigit = val => {
 
 const mathOperation = () => {
   if (activeOperator === '+') {
-    Number(
-      (currentValue.textContent =
-        parseFloat(preValue.textContent) + parseFloat(currentValue.textContent))
-    );
+    currentValue.textContent = (
+      parseFloat(preValue.textContent) + parseFloat(currentValue.textContent)
+    ).toFixed(3);
     preValue.textContent = ' ';
   } else if (activeOperator === '-') {
-    currentValue.textContent =
-      parseFloat(preValue.textContent) - parseFloat(currentValue.textContent);
+    currentValue.textContent = (
+      parseFloat(preValue.textContent) - parseFloat(currentValue.textContent)
+    ).toFixed(3);
     preValue.textContent = ' ';
   } else if (activeOperator === '*') {
-    currentValue.textContent =
-      parseFloat(preValue.textContent) * parseFloat(currentValue.textContent);
+    currentValue.textContent = (
+      parseFloat(preValue.textContent) * parseFloat(currentValue.textContent)
+    ).toFixed(3);
     preValue.textContent = ' ';
   } else if (activeOperator === '÷') {
-    currentValue.textContent =
-      parseFloat(preValue.textContent) / parseFloat(currentValue.textContent);
+    currentValue.textContent = (
+      parseFloat(preValue.textContent) / parseFloat(currentValue.textContent)
+    ).toFixed(3);
     preValue.textContent = ' ';
   }
 };
