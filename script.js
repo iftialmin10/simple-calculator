@@ -52,8 +52,10 @@ const checkLastDigit = val => {
 
 const mathOperation = () => {
   if (activeOperator === '+') {
-    currentValue.textContent =
-      parseFloat(preValue.textContent) + parseFloat(currentValue.textContent);
+    Number(
+      (currentValue.textContent =
+        parseFloat(preValue.textContent) + parseFloat(currentValue.textContent))
+    );
     preValue.textContent = ' ';
   } else if (activeOperator === '-') {
     currentValue.textContent =
@@ -152,28 +154,28 @@ div.addEventListener('click', function () {
   preValue.textContent = currentValue.textContent + ' ' + '÷' + ' ';
   resetForOperation();
   activeOperator = '÷';
-  console.log('div', activeOperator);
+  console.log('div');
 });
 
 multi.addEventListener('click', function () {
   preValue.textContent = currentValue.textContent + ' ' + '*' + ' ';
   resetForOperation();
   activeOperator = '*';
-  console.log('multi', activeOperator);
+  console.log('multi');
 });
 
 add.addEventListener('click', function () {
   preValue.textContent = currentValue.textContent + ' ' + '+' + ' ';
   resetForOperation();
   activeOperator = '+';
-  console.log('add', activeOperator);
+  console.log('add');
 });
 
 sub.addEventListener('click', function () {
   preValue.textContent = currentValue.textContent + ' ' + '-' + ' ';
   resetForOperation();
   activeOperator = '-';
-  console.log('sub', activeOperator);
+  console.log('sub');
 });
 
 dec.addEventListener('click', function () {
@@ -186,6 +188,7 @@ eql.addEventListener('click', function () {
   if (currentValue.textContent && preValue.textContent && activeOperator) {
     mathOperation();
   }
+  activeOperator = '';
   console.log('eql');
 });
 
