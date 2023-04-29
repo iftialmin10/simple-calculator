@@ -50,11 +50,35 @@ const checkLastDigit = val => {
   }
 };
 
+const mathOperation = () => {
+  if (activeOperator === '+') {
+    currentValue.textContent =
+      parseFloat(preValue.textContent) + parseFloat(currentValue.textContent);
+    preValue.textContent = ' ';
+  } else if (activeOperator === '-') {
+    currentValue.textContent =
+      parseFloat(preValue.textContent) - parseFloat(currentValue.textContent);
+    preValue.textContent = ' ';
+  } else if (activeOperator === '*') {
+    currentValue.textContent =
+      parseFloat(preValue.textContent) * parseFloat(currentValue.textContent);
+    preValue.textContent = ' ';
+  } else if (activeOperator === '÷') {
+    currentValue.textContent =
+      parseFloat(preValue.textContent) / parseFloat(currentValue.textContent);
+    preValue.textContent = ' ';
+  }
+};
+
+const resetForOperation = () => {
+  currentValue.textContent = '0';
+  haveDot = false;
+};
+
 // Event handler
 ac.addEventListener('click', function () {
-  currentValue.textContent = '0';
   preValue.textContent = '';
-  haveDot = false;
+  resetForOperation();
   console.log('ac');
 });
 
@@ -125,28 +149,31 @@ num9.addEventListener('click', function () {
 });
 
 div.addEventListener('click', function () {
-  preValue.textContent = currentValue.textContent + '÷';
-  currentValue.textContent = '0';
-  console.log('div');
+  preValue.textContent = currentValue.textContent + ' ' + '÷' + ' ';
+  resetForOperation();
+  activeOperator = '÷';
+  console.log('div', activeOperator);
 });
 
 multi.addEventListener('click', function () {
-  preValue.textContent = currentValue.textContent + '*';
-  currentValue.textContent = '0';
-  console.log('multi');
+  preValue.textContent = currentValue.textContent + ' ' + '*' + ' ';
+  resetForOperation();
+  activeOperator = '*';
+  console.log('multi', activeOperator);
 });
 
 add.addEventListener('click', function () {
-  preValue.textContent = currentValue.textContent + '+';
-  currentValue.textContent = '0';
-  console.log('add');
+  preValue.textContent = currentValue.textContent + ' ' + '+' + ' ';
+  resetForOperation();
+  activeOperator = '+';
+  console.log('add', activeOperator);
 });
 
 sub.addEventListener('click', function () {
-  preValue.textContent = currentValue.textContent + '-';
-  currentValue.textContent = '0';
+  preValue.textContent = currentValue.textContent + ' ' + '-' + ' ';
+  resetForOperation();
   activeOperator = '-';
-  console.log('sub');
+  console.log('sub', activeOperator);
 });
 
 dec.addEventListener('click', function () {
@@ -156,6 +183,9 @@ dec.addEventListener('click', function () {
 });
 
 eql.addEventListener('click', function () {
+  if (currentValue.textContent && preValue.textContent && activeOperator) {
+    mathOperation();
+  }
   console.log('eql');
 });
 
