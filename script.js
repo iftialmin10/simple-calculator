@@ -153,30 +153,59 @@ num9.addEventListener('click', function () {
 });
 
 div.addEventListener('click', function () {
-  preValue.textContent = currentValue.textContent + ' ' + '÷' + ' ';
-  resetForOperation();
-  activeOperator = '÷';
+  if (currentValue.textContent && preValue.textContent && activeOperator) {
+    mathOperation();
+    preValue.textContent = currentValue.textContent + ' ' + '÷' + ' ';
+    resetForOperation();
+    activeOperator = '÷';
+  } else {
+    preValue.textContent = currentValue.textContent + ' ' + '÷' + ' ';
+    resetForOperation();
+    activeOperator = '÷';
+  }
+
   console.log('div');
 });
 
 multi.addEventListener('click', function () {
-  preValue.textContent = currentValue.textContent + ' ' + '*' + ' ';
-  resetForOperation();
-  activeOperator = '*';
+  if (currentValue.textContent && preValue.textContent && activeOperator) {
+    mathOperation();
+    preValue.textContent = currentValue.textContent + ' ' + '*' + ' ';
+    resetForOperation();
+    activeOperator = '*';
+  } else {
+    preValue.textContent = currentValue.textContent + ' ' + '*' + ' ';
+    resetForOperation();
+    activeOperator = '*';
+  }
   console.log('multi');
 });
 
 add.addEventListener('click', function () {
-  preValue.textContent = currentValue.textContent + ' ' + '+' + ' ';
-  resetForOperation();
-  activeOperator = '+';
+  if (currentValue.textContent && preValue.textContent && activeOperator) {
+    mathOperation();
+    preValue.textContent = currentValue.textContent + ' ' + '+' + ' ';
+    resetForOperation();
+    activeOperator = '+';
+  } else {
+    preValue.textContent = currentValue.textContent + ' ' + '+' + ' ';
+    resetForOperation();
+    activeOperator = '+';
+  }
   console.log('add');
 });
 
 sub.addEventListener('click', function () {
-  preValue.textContent = currentValue.textContent + ' ' + '-' + ' ';
-  resetForOperation();
-  activeOperator = '-';
+  if (currentValue.textContent && preValue.textContent && activeOperator) {
+    mathOperation();
+    preValue.textContent = currentValue.textContent + ' ' + '-' + ' ';
+    resetForOperation();
+    activeOperator = '-';
+  } else {
+    preValue.textContent = currentValue.textContent + ' ' + '-' + ' ';
+    resetForOperation();
+    activeOperator = '-';
+  }
   console.log('sub');
 });
 
